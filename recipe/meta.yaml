@@ -23,7 +23,7 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
-    host:
+  host:
     - r-base
     - r-diagrammer
     - r-mass
