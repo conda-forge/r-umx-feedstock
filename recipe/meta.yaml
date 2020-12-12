@@ -23,7 +23,7 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
-  host:
+    host:
     - r-base
     - r-diagrammer
     - r-mass
@@ -34,11 +34,13 @@ requirements:
     - r-rcurl
     - r-cowplot
     - r-ggplot2
+    - r-kableextra
     - r-knitr
     - r-lavaan
     - r-mvtnorm
     - r-nlme
     - r-polycor
+    - r-scales
     - r-xtable
   run:
     - r-base
@@ -51,11 +53,13 @@ requirements:
     - r-rcurl
     - r-cowplot
     - r-ggplot2
+    - r-kableextra
     - r-knitr
     - r-lavaan
     - r-mvtnorm
     - r-nlme
     - r-polycor
+    - r-scales
     - r-xtable
 
 test:
