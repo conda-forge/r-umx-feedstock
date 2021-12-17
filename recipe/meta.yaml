@@ -1,4 +1,4 @@
-{% set version = "4.10.10" %}
+{% set version = "4.10.50" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/umx_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/umx/umx_{{ version }}.tar.gz
-  sha256: 8527ec01d2d66e78744034e52ad0ecd7ef7502b32f418a0f0100eb2470a20cb0
+  sha256: f573adf24a33a0491f025210a89e1bdc4e00847983f3c769d1d09d0d87cfb086
 
 build:
   merge_build_host: true  # [win]
