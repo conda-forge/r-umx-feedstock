@@ -1,4 +1,4 @@
-{% set version = "4.10.50" %}
+{% set version = "4.15.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/umx_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/umx/umx_{{ version }}.tar.gz
-  sha256: f573adf24a33a0491f025210a89e1bdc4e00847983f3c769d1d09d0d87cfb086
+  sha256: fb679048480f9d4e5fb0553773adfc6a9ec7aef7d6165276ecc5d919ff38117d
 
 build:
   merge_build_host: true  # [win]
@@ -23,6 +23,7 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-diagrammer
@@ -30,7 +31,7 @@ requirements:
     - r-mass
     - r-matrix
     - r-mumin
-    - r-openmx >=2.11.5
+    - r-openmx >=2.19.0
     - r-r2html
     - r-rcurl
     - r-cowplot
@@ -51,7 +52,7 @@ requirements:
     - r-mass
     - r-matrix
     - r-mumin
-    - r-openmx >=2.11.5
+    - r-openmx >=2.19.0
     - r-r2html
     - r-rcurl
     - r-cowplot
