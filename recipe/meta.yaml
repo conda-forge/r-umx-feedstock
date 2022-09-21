@@ -23,6 +23,7 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-diagrammer
@@ -30,7 +31,7 @@ requirements:
     - r-mass
     - r-matrix
     - r-mumin
-    - r-openmx >=2.11.5
+    - r-openmx >=2.19.0
     - r-r2html
     - r-rcurl
     - r-cowplot
@@ -51,7 +52,7 @@ requirements:
     - r-mass
     - r-matrix
     - r-mumin
-    - r-openmx >=2.11.5
+    - r-openmx >=2.19.0
     - r-r2html
     - r-rcurl
     - r-cowplot
