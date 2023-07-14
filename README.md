@@ -1,11 +1,11 @@
-About r-umx
-===========
+About r-umx-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-umx-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/tbates/umx
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-umx-feedstock/blob/main/LICENSE.txt)
 
 Summary: Quickly create, run, and report structural equation and twin models. See '?umx' for help, and umx_open_CRAN_page("umx") for NEWS.
 
