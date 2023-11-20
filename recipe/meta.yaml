@@ -26,51 +26,71 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-diagrammer
-    - r-diagrammersvg
-    - r-mass
-    - r-matrix
-    - r-mumin
-    - r-openmx >=2.19.0
-    - r-r2html
-    - r-rcurl
     - r-cowplot
+    - r-diagrammer
+    - r-foreign
+    - r-gert
     - r-ggplot2
+    - r-hrbrthemes
     - r-kableextra
     - r-knitr
     - r-lavaan
+    - r-mass
+    - r-matrix
+    - r-mumin
     - r-mvtnorm
     - r-nlme
+    - r-openmx >=2.19.0
+    - r-openxlsx
+    - r-paran
     - r-polycor
-    - r-rsvg
+    - r-psych
+    - r-psychtools
+    - r-pwr
+    - r-r2html
+    - r-rcurl
+    - r-rmarkdown
     - r-scales
     - r-xtable
   run:
     - r-base
-    - r-diagrammer
-    - r-diagrammersvg
-    - r-mass
-    - r-matrix
-    - r-mumin
-    - r-openmx >=2.19.0
-    - r-r2html
-    - r-rcurl
     - r-cowplot
+    - r-diagrammer
+    - r-foreign
+    - r-gert
     - r-ggplot2
+    - r-hrbrthemes
     - r-kableextra
     - r-knitr
     - r-lavaan
+    - r-mass
+    - r-matrix
+    - r-mumin
     - r-mvtnorm
     - r-nlme
+    - r-openmx >=2.19.0
+    - r-openxlsx
+    - r-paran
     - r-polycor
-    - r-rsvg
+    - r-psych
+    - r-psychtools
+    - r-pwr
+    - r-r2html
+    - r-rcurl
+    - r-rmarkdown
     - r-scales
     - r-xtable
 
 test:
+  requires:
+    - r-testthat
+  source_files:
+    - tests/
   commands:
-    - $R -e "library('umx')"           # [not win]
-    - "\"%R%\" -e \"library('umx')\""  # [win]
+    - $R -e "library('umx')"                                                          # [not win]
+    - $R -e "testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)"           # [not win]
+    - "\"%R%\" -e \"library('umx')\""                                                 # [win]
+    - "\"%R%\" -e \"testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)\""  # [win]
 
 about:
   home: https://github.com/tbates/umx
