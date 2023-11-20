@@ -1,4 +1,4 @@
-{% set version = "4.16.0" %}
+{% set version = "4.19.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/umx_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/umx/umx_{{ version }}.tar.gz
-  sha256: b3dfabf87dfa5c8c06960d76659ad3ba6290bb54b1152554157d389b18ab7212
+  sha256: 45c3b76959efeabd090750dfe2a3b7c4b2a5c6f5ed27a9fb843b16019e40e432
 
 build:
   merge_build_host: true  # [win]
@@ -26,51 +26,71 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-diagrammer
-    - r-diagrammersvg
-    - r-mass
-    - r-matrix
-    - r-mumin
-    - r-openmx >=2.19.0
-    - r-r2html
-    - r-rcurl
     - r-cowplot
+    - r-diagrammer
+    - r-foreign
+    - r-gert
     - r-ggplot2
+    - r-hrbrthemes
     - r-kableextra
     - r-knitr
     - r-lavaan
+    - r-mass
+    - r-matrix
+    - r-mumin
     - r-mvtnorm
     - r-nlme
+    - r-openmx >=2.19.0
+    - r-openxlsx
+    - r-paran
     - r-polycor
-    - r-rsvg
+    - r-psych
+    - r-psychtools
+    - r-pwr
+    - r-r2html
+    - r-rcurl
+    - r-rmarkdown
     - r-scales
     - r-xtable
   run:
     - r-base
-    - r-diagrammer
-    - r-diagrammersvg
-    - r-mass
-    - r-matrix
-    - r-mumin
-    - r-openmx >=2.19.0
-    - r-r2html
-    - r-rcurl
     - r-cowplot
+    - r-diagrammer
+    - r-foreign
+    - r-gert
     - r-ggplot2
+    - r-hrbrthemes
     - r-kableextra
     - r-knitr
     - r-lavaan
+    - r-mass
+    - r-matrix
+    - r-mumin
     - r-mvtnorm
     - r-nlme
+    - r-openmx >=2.19.0
+    - r-openxlsx
+    - r-paran
     - r-polycor
-    - r-rsvg
+    - r-psych
+    - r-psychtools
+    - r-pwr
+    - r-r2html
+    - r-rcurl
+    - r-rmarkdown
     - r-scales
     - r-xtable
 
 test:
+  requires:
+    - r-testthat
+  source_files:
+    - tests/
   commands:
-    - $R -e "library('umx')"           # [not win]
-    - "\"%R%\" -e \"library('umx')\""  # [win]
+    - $R -e "library('umx')"                                                          # [not win]
+    - $R -e "testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)"           # [not win]
+    - "\"%R%\" -e \"library('umx')\""                                                 # [win]
+    - "\"%R%\" -e \"testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)\""  # [win]
 
 about:
   home: https://github.com/tbates/umx
