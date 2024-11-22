@@ -25,7 +25,6 @@ requirements:
   host:
     - r-base
     - r-diagrammer
-    - r-diagrammersvg
     - r-mass
     - r-matrix
     - r-mumin
@@ -33,20 +32,27 @@ requirements:
     - r-r2html
     - r-rcurl
     - r-cowplot
+    - r-foreign
+    - r-gert
     - r-ggplot2
+    - r-hrbrthemes
     - r-kableextra
     - r-knitr
     - r-lavaan
     - r-mvtnorm
     - r-nlme
+    - r-openxlsx
+    - r-paran
     - r-polycor
-    - r-rsvg
+    - r-psych
+    - r-psychtools
+    - r-pwr
+    - r-rmarkdown
     - r-scales
     - r-xtable
   run:
     - r-base
     - r-diagrammer
-    - r-diagrammersvg
     - r-mass
     - r-matrix
     - r-mumin
@@ -54,14 +60,22 @@ requirements:
     - r-r2html
     - r-rcurl
     - r-cowplot
+    - r-foreign
+    - r-gert
     - r-ggplot2
+    - r-hrbrthemes
     - r-kableextra
     - r-knitr
     - r-lavaan
     - r-mvtnorm
     - r-nlme
+    - r-openxlsx
+    - r-paran
     - r-polycor
-    - r-rsvg
+    - r-psych
+    - r-psychtools
+    - r-pwr
+    - r-rmarkdown
     - r-scales
     - r-xtable
 
