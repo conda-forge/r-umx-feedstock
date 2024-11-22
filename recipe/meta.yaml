@@ -1,4 +1,4 @@
-{% set version = "4.16.0" %}
+{% set version = "4.21.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/umx_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/umx/umx_{{ version }}.tar.gz
-  sha256: b3dfabf87dfa5c8c06960d76659ad3ba6290bb54b1152554157d389b18ab7212
+  sha256: 13a5dee7b2f29d4cd9e9ce26eca87b8241753b8f410601b6653b918f36bed947
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -25,7 +25,6 @@ requirements:
   host:
     - r-base
     - r-diagrammer
-    - r-diagrammersvg
     - r-mass
     - r-matrix
     - r-mumin
@@ -33,20 +32,27 @@ requirements:
     - r-r2html
     - r-rcurl
     - r-cowplot
+    - r-foreign
+    - r-gert
     - r-ggplot2
+    - r-hrbrthemes
     - r-kableextra
     - r-knitr
     - r-lavaan
     - r-mvtnorm
     - r-nlme
+    - r-openxlsx
+    - r-paran
     - r-polycor
-    - r-rsvg
+    - r-psych
+    - r-psychtools
+    - r-pwr
+    - r-rmarkdown
     - r-scales
     - r-xtable
   run:
     - r-base
     - r-diagrammer
-    - r-diagrammersvg
     - r-mass
     - r-matrix
     - r-mumin
@@ -54,14 +60,22 @@ requirements:
     - r-r2html
     - r-rcurl
     - r-cowplot
+    - r-foreign
+    - r-gert
     - r-ggplot2
+    - r-hrbrthemes
     - r-kableextra
     - r-knitr
     - r-lavaan
     - r-mvtnorm
     - r-nlme
+    - r-openxlsx
+    - r-paran
     - r-polycor
-    - r-rsvg
+    - r-psych
+    - r-psychtools
+    - r-pwr
+    - r-rmarkdown
     - r-scales
     - r-xtable
 
