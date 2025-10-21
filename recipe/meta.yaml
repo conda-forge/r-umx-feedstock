@@ -1,4 +1,4 @@
-{% set version = "4.21.0" %}
+{% set version = "4.59.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/umx_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/umx/umx_{{ version }}.tar.gz
-  sha256: 13a5dee7b2f29d4cd9e9ce26eca87b8241753b8f410601b6653b918f36bed947
+  sha256: 4f89cdfc95579efaa9d19de66724ca4870e3663f6e8d39c8b0e8225f07f7e7b3
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
