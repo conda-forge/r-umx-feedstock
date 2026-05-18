@@ -1,4 +1,4 @@
-{% set version = "4.60.0" %}
+{% set version = "4.65.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/umx_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/umx/umx_{{ version }}.tar.gz
-  sha256: 48fbdb755439c23da25d1a8b9e6bf7828378ae02b2b69de8bbbd053fd7cf23ac
+  sha256: 5e1b72cc032c3af3a28087bf8b342f5ae8b79869b7879c84d1a05868a1041f67
 
 build:
   number: 0
