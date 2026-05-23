@@ -7,17 +7,16 @@ Home: https://github.com/tbates/umx
 
 Package license: GPL-3.0-only
 
-Summary: Quickly create, run, and report structural equation and twin models. See '?umx' for help, and umx_open_CRAN_page("umx") for NEWS.
+Summary: Quickly create, run, and report structural equation models, and twin models. See '?umx' for help, and umx_open_CRAN_page("umx") for NEWS. Timothy C. Bates, Michael C. Neale, Hermine H. Maes, (2019). umx: A library for Structural Equation and Twin Modelling in R. Twin Research and Human Genetics, 22, 27-41. <doi:10.1017/thg.2019.2>.
 
 Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10305&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-umx-feedstock?branchName=main">
-      </a>
+      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
     </td>
   </tr>
 </table>
