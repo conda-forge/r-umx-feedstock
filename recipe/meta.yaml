@@ -1,4 +1,4 @@
-{% set version = "4.65.0" %}
+{% set version = "4.80.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/umx_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/umx/umx_{{ version }}.tar.gz
-  sha256: 5e1b72cc032c3af3a28087bf8b342f5ae8b79869b7879c84d1a05868a1041f67
+  sha256: 12866792cc201c6f40be7f6b8b2e5c9ea7f8b1dc0bc23d0187519d8f30be7f97
 
 build:
   number: 0
@@ -83,10 +83,8 @@ test:
 about:
   home: https://github.com/tbates/umx
   license: GPL-3.0-only
-  summary: 'Quickly create, run, and report structural equation models, and twin models. See
-    ''?umx'' for help, and umx_open_CRAN_page("umx") for NEWS. Timothy C. Bates, Michael
-    C. Neale, Hermine H. Maes, (2019). umx: A library for Structural Equation and Twin
-    Modelling in R. Twin Research and Human Genetics, 22, 27-41. <doi:10.1017/thg.2019.2>.'
+  summary: 'Quickly create, run, and report structural equation models, and twin models. See ''?umx'' for help, and umx_open_CRAN_page("umx") for NEWS. Timothy C. Bates, Michael C. Neale, Hermine H. Maes, (2019). umx: A library for Structural Equation and Twin Modelling in R. Twin Research and Human Genetics, 22, 27-41.
+    <doi:10.1017/thg.2019.2>.'
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
